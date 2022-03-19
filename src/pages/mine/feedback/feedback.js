@@ -1,7 +1,7 @@
-import { View, Textarea, Input, Image, Button } from '@tarojs/components'
+import { View, Textarea, Button } from '@tarojs/components'
 import Taro, { Component } from '@tarojs/taro'
-import util from '../../../utils/util.js'
-import api from '../../../config/api.js'
+import util from '@utils/util.js'
+import api from '@myConfig/api.js'
 
 import './feedback.scss'
 
@@ -102,25 +102,12 @@ export default class feedback extends Component {
         <View className='fb-body'>
           <Textarea
             className='content'
-            placeholder='对我们网站、宠物、服务，你还有什么建议吗？你还希望在优宠熊上买到什么宠物？请告诉我们...'
+            placeholder='对我们书籍服务，你还有什么建议吗？你还希望在咱们的软件上看到什么书籍呢？请告诉我们...'
             onInput={this.textareaInput}
           ></Textarea>
           <View className='text-count'>0/500</View>
         </View>
-        <View className='fb-mobile'>
-          <View className='label'>手机号码</View>
-          <View className='mobile-box'>
-            <Input
-              className='mobile'
-              placeholder='方便我们与你联系'
-              onInput={this.mobileInput}
-            ></Input>
-            <Image
-              className='clear-icon'
-              src='http://photo.youchongxiong.com/hxm%252Fyanxuan-wap%252Fp%252F20161201%252Fstyle%252Fimg%252Ficon-normal%252Fclear-fb-dd9d604f86.png'
-            ></Image>
-          </View>
-        </View>
+        
         <Button className='fb-btn' onClick={this.submitFeedback}>
           提交
         </Button>

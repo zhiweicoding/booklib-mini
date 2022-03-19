@@ -5,13 +5,10 @@ import {
   Image, Block, Input
 } from '@tarojs/components'
 import Taro, { Component } from '@tarojs/taro'
-import VirtualList from '@tarojs/components/virtual-list'
 import Loading from '@com/loading'
 import LoadMore from '@com/loadMore/loadMore'
 import Mu from '@com/mu/mu'
-import CatList from '@com/catList/catList'
 import { getWindowHeight } from '@utils/style'
-import { AtTabs, AtTabsPane } from 'taro-ui'
 import util from '@utils/util.js'
 import apiProduct from '@myConfig/apiProduct.js'
 import api from '@myConfig/api.js'

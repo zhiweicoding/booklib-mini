@@ -1,6 +1,6 @@
-import { Block, View, Image, Text, Navigator, Button, Input } from '@tarojs/components'
+import { Block, View, Image, Text, Navigator } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { AtInput, AtModal, AtModalHeader, AtModalContent, AtModalAction, AtCurtain, AtInputNumber } from "taro-ui"
+import {  AtInputNumber } from "taro-ui"
 import apiProduct from '@myConfig/apiProduct'
 import util from '@utils/util.js'
 

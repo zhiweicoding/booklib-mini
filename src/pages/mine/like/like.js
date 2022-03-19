@@ -1,8 +1,8 @@
 import { View, Textarea, Input, Image, Button } from '@tarojs/components'
 import Taro, { Component } from '@tarojs/taro'
 import { AtButton } from 'taro-ui'
-import util from '../../../utils/util.js'
-import api from '../../../config/api.js'
+import util from '@utils/util.js'
+import api from '@myConfig/api.js'
 
 import './like.scss'
 

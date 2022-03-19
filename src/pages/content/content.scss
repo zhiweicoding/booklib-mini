@@ -1,25 +1,144 @@
+@import "@styles/color.scss";
+
 page {
-  min-height: 100%;
-  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  background: #f4f4f4;
 }
 
 .container {
-  min-height: 100%;
-  background-color: #fff;
+  padding: 10px 2%;
 }
 
-.menu {
-  width: 100%;
+.title {
+  height: 100px;
+  background-color: rgba($color: #ddd, $alpha: 0.5);
+  border-radius: 15px;
+  color: #333;
+  text-align: center;
+  line-height: 100px;
+  width: 96%;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.readNum {
   display: flex;
-  flex-direction: row;
-  align-content: center;
-  height: 80px;
+  color: #666;
+  width: 96%;
+  font-size: 28px;
+  justify-self: flex-end;
+  justify-content: flex-end;
+  justify-items: flex-end;
+  float: right;
+}
+
+.hor {
+  white-space: nowrap;
+  float: left;
+  margin-top: 20px;
 
   &-item {
+    display: inline-block;
+    color: #333;
+    text-align: center;
+    font-size: 28px;
+    padding: 4px 0;
+  }
+  &-g {
+    display: inline-block;
+    color: #333;
+    text-align: center;
+    margin-right: 20px;
+    padding: 4px 0;
+    font-size: 28px;
+  }
+}
+
+.horOn {
+  color: #522319;
+  font-weight: bold;
+}
+
+.scroll {
+  height: 100px;
+  white-space: nowrap;
+  padding: 0px 10px;
+  &-item {
+    border-bottom: 1 solid #522319;
+    width: 30%;
+    display: inline-block;
+    color: #3b1a12;
+    text-align: center;
+    margin-right: 20px;
+    padding: 20px 0;
+  }
+}
+
+.scrollOn {
+  border-bottom: 1px solid #522319;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 9999;
+  background: #fff;
+  bottom: 0;
+  height: 110px;
+  width: 100%;
+  border-top: 1px solid #522319;
+  align-items: center;
+
+  &-left {
     font-size: 34px;
+    color: #522319;
+    padding-left: 5%;
+    display: flex;
+    flex-direction: row;
   }
 
-  &-g {
-    font-size: 30px;
+  &-mid {
+    font-size: 34px;
+    color: #522319;
+    display: flex;
+    flex-direction: row;
   }
+
+  &-right {
+    font-size: 34px;
+    color: #522319;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.richText {
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px 10px;
+  border: none;
+}
+
+.segPart {
+  text-indent: 56px;
+  text-align: justify;
+  font-size: 28px;
+  line-height: 56px;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+.imgCls{
+  width: 76%;
+  height: auto;
+  margin: 15px 12%;
+}
+
+.blankLineCls{
+  width: 100%;
+  height: 120px;
 }

@@ -1,0 +1,25 @@
+@import "@styles/color.scss";
+
+.hor {
+  height: 100px;
+  white-space: nowrap;
+  float: left;
+  width: 100%;
+  &-item {
+    display: inline-block;
+    color: #333;
+    text-align: center;
+    padding: 4px 0;
+  }
+  &-g {
+    display: inline-block;
+    color: #333;
+    text-align: center;
+    margin-right: 20px;
+    padding: 4px 0;
+  }
+}
+
+.horOn {
+  color: #522319;
+}

@@ -33,31 +33,6 @@ export default class feedback extends Component {
   componentDidMount() { }
 
   componentDidShow() {
-    if (process.env.TARO_ENV === 'swan') {
-      // eslint-disable-next-line no-undef
-      swan.setPageInfo({
-        title: '意见反馈-优宠熊',
-        keywords: '宠物猫,正规繁育猫舍,买猫,猫市场,宠物猫交易网,优宠熊,宠物平台,天津宠物交易,北京买猫,上海买猫,武汉买猫,南京买猫,成都买猫,江苏买猫,广州买猫,天津买猫,天津宠物市场,猫,优宠,繁育猫舍',
-        description: '优宠熊正规繁育猫舍，秉承优宠科技一贯的严谨态度，致力于把健康的猫咪送到用户家中。',
-        articleTitle: '意见反馈-优宠熊',
-        releaseDate: '2019-08-1 12:01:30',
-        image: [
-          'https://lg-qrm18qcm-1255940368.cos.ap-shanghai.myqcloud.com/banner07142243/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20190807-180924.png',
-          'https://lg-qrm18qcm-1255940368.cos.ap-shanghai.myqcloud.com/banner07142243/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20190807-181024.png',
-          'https://lg-qrm18qcm-1255940368.cos.ap-shanghai.myqcloud.com/banner07142243/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20190807-181234.png'
-        ],
-        visit: {
-          pv: '13900',
-          uv: '1120',
-          sessionDuration: '134'
-        },
-        likes: '75',
-        comments: '54',
-        collects: '93',
-        shares: '8',
-        followers: '35'
-      })
-    }
   }
 
   componentDidHide() {

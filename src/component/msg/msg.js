@@ -2,7 +2,8 @@ import {
     View,
     Navigator,
     Image,
-    Text
+    Text,
+    RichText
 } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import './msg.scss'
@@ -110,16 +111,13 @@ export default class msg extends Taro.Component {
         let goodBrief = item.goodBrief;
 
         return (
-            <View className={'picItem '}>
-                <Image
-                    className='picItem-img'
-                    src={'https://lg-qrm18qcm-1255940368.cos.ap-shanghai.myqcloud.com/miniProgram/v2-7f1b40d87168cda877a05d9ff55007b6_720w.jpeg'}
-                    // backgroundSize='cover'
-                    mode='aspectFit'
-                    lazyLoad={true} ></Image>
-                <View className='picItem-line' onClick={this.openUrl.bind(this, item, whereFrom)}>
-                    <View className='picItem-line-text'>扉页·彩色图片</View>
+            <View className={'rt '}>
+                <RichText className='rt-title' nodes={'<div>【北辰区概况】</div>'}></RichText>
+                <View className='rt-from'>
+                    <View className='rt-from-name'>来源：</View>
+                    <View className='rt-from-msg'>天津年鉴·2021卷</View>
                 </View>
+                <RichText className='rt-content' nodes={'<div>北辰区位于天津市中心城区北部，处于京滨综合发展轴中心的位置。</div>'}></RichText>
             </View>
         )
     }

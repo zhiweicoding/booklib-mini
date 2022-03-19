@@ -59,6 +59,12 @@ export default class search extends Taro.Component {
     })
   }
 
+  openUrl(){
+    Taro.navigateTo({
+      url:`/pages/sr/sr`
+    })
+  }
+
   render() {
     const {
       historyKeyword,
@@ -118,7 +124,7 @@ export default class search extends Taro.Component {
             )}
 
 
-            <Button className='search-msg-btn'>检索</Button>
+            <Button className='search-msg-btn' onClick={this.openUrl.bind(this)}>检索</Button>
           </View>
 
           {this.state.searchHis.length > 0 && (

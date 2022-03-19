@@ -1,22 +1,16 @@
 import {
-  Block,
   View,
   Navigator,
   Image,
-  Text,
-  Swiper,
-  SwiperItem,
   ScrollView
 } from '@tarojs/components'
 
 import Taro from '@tarojs/taro'
-import Book from '../../component/book/book'
-import Loadmore from '../../component/loadMore/loadMore'
-import util from '../../utils/util'
-import api from '../../config/api'
-import user from '../../utils/user.js'
-
-import banner1 from '../../img/banner1.jpg'
+import Book from '@com/book/book'
+import Loadmore from '@com/loadMore/loadMore'
+import util from '@utils/util'
+import api from '@myConfig/api'
+import user from '@utils/user.js'
 
 import './index.scss'
 
@@ -34,18 +28,6 @@ export default class index extends Taro.Component {
   constructor(props) {
     super(props)
     this.state = {
-      banners: [
-        {
-          id: 'someId1',
-          link: '',
-          image_url: banner1
-        },
-        {
-          id: 'someId2',
-          link: '',
-          image_url: banner1
-        }
-      ],
       doYouLikeList: [],
       horList: [],
       tapImage: {},

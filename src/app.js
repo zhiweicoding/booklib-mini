@@ -148,8 +148,7 @@ class _App extends Taro.Component {
         }
       ]
     },
-    navigateToMiniProgramAppIdList: [
-    ],
+
     plugins: {
 
     }

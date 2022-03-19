@@ -5,13 +5,10 @@ import {
   Image, Block, Input
 } from '@tarojs/components'
 import Taro, { Component } from '@tarojs/taro'
-import VirtualList from '@tarojs/components/virtual-list'
 import Loading from '@com/loading'
 import LoadMore from '@com/loadMore/loadMore'
 import Pic from '@com/pic/pic'
-import CatList from '@com/catList/catList'
 import { getWindowHeight } from '@utils/style'
-import { AtTabs, AtTabsPane } from 'taro-ui'
 import util from '@utils/util.js'
 import apiProduct from '@myConfig/apiProduct.js'
 import api from '@myConfig/api.js'
@@ -74,7 +71,7 @@ export default class cate extends Taro.Component {
     const height = getWindowHeight(false)
     const tabList = [{ title: '标签页1' }, { title: '标签页2' }]
     return (
-      <Block>
+      <Block className='container'>
         <View className='search'>
           <View className='input'>
             <View onClick={this.gotoSearch} className='searchBefore'>

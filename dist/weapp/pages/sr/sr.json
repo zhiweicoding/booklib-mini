@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "at-switch": "../../npm/taro-ui/dist/weapp/components/switch/index"
+  },
+  "navigationBarTitleText": "智能搜索"
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "at-button": "../../../npm/taro-ui/dist/weapp/components/button/index"
+  },
+  "navigationBarTitleText": "我的收藏"
+}

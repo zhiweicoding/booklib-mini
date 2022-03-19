@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mu": "../../component/mu/mu",
+    "load-more": "../../component/loadMore/loadMore"
+  },
+  "navigationBarTitleText": "彩页",
+  "enablePullDownRefresh": false
+}

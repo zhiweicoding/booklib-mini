@@ -1,0 +1,14 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="tips1">
+        <block>
+            <block wx:if="{{hasMore}}">
+                <view class="loading_box">
+                    <view class="loading1"></view>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="havenoclass">没有更多内容了</view>
+            </block>
+        </block>
+    </view>
+</block>

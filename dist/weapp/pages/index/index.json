@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "book": "../../component/book/book",
+    "loadmore": "../../component/loadMore/loadMore"
+  },
+  "navigationBarTitleText": "天津年鉴",
+  "enablePullDownRefresh": false
+}

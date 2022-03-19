@@ -1,0 +1,21 @@
+<block wx:if="{{$taroCompReady}}">
+    <scroll-view class="scrollViewCss" scroll-y="{{true}}" scroll-with-animation="{{true}}" bindscrolltolower="loadMoreData" lower-threshold="50" upper-threshold="50" scroll-top="{{scrollTop}}" bindscroll="onPageScroll">
+        <view class="search">
+            <view class="input">
+                <view bindtap="gotoSearch" class="searchBefore">
+                    <image class="icon"></image>
+                    <input class="txt" placeholder="随便搜搜" value="" />
+                </view>
+                <view class="searchAfter">
+                    <navigator url="/pages/search/search?fromPage=act" class="searchName">搜索</navigator>
+                </view>
+            </view>
+        </view>
+        <view class="backline3"></view>
+        <book compid="{{$compid__1}}"></book>
+        <book compid="{{$compid__2}}"></book>
+        <block wx:if="{{moreShow}}">
+            <loadmore compid="{{$compid__3}}"></loadmore>
+        </block>
+    </scroll-view>
+</block>

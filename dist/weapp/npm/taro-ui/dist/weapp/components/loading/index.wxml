@@ -1,0 +1,7 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="at-loading" style="{{anonymousState__1}}">
+        <view class="at-loading__ring" style="{{anonymousState__2}}"></view>
+        <view class="at-loading__ring" style="{{anonymousState__3}}"></view>
+        <view class="at-loading__ring" style="{{anonymousState__4}}"></view>
+    </view>
+</block>

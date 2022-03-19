@@ -1,0 +1,54 @@
+
+page {
+  background: #f4f4f4;
+  min-height: 100%; }
+
+.container {
+  background: #f4f4f4;
+  min-height: 100%;
+  height: 100%;
+  padding-top: 10rpx; }
+
+.likeItem {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 96%;
+  padding: 24rpx 34rpx;
+  margin: 10rpx 2%;
+  background-color: #fff;
+  border-radius: 15rpx; }
+  .likeItem-midlle {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .likeItem-midlle-head {
+      margin-bottom: 10rpx;
+      font-size: 32rpx;
+      color: #333; }
+    .likeItem-midlle-body {
+      font-size: 30rpx;
+      color: #555; }
+  .likeItem-btn {
+    height: 64rpx; }

@@ -1,0 +1,8 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="picItem ">
+        <image class="picItem-img" src="https://lg-qrm18qcm-1255940368.cos.ap-shanghai.myqcloud.com/miniProgram/v2-7f1b40d87168cda877a05d9ff55007b6_720w.jpeg" mode="aspectFit" lazy-load="{{true}}"></image>
+        <view class="picItem-line" bindtap="openUrl" data-e-tap-so="this" data-e-tap-a-a="{{item}}" data-e-tap-a-b="{{whereFrom}}">
+            <view class="picItem-line-text">扉页·彩色图片</view>
+        </view>
+    </view>
+</block>

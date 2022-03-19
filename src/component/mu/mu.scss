@@ -1,0 +1,19 @@
+@import "@styles/color.scss";
+
+.mu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 20px 4% 20px 5%;
+  border-bottom: 1px solid #461c14;
+  margin: 15px 0px 15px 0px;
+  justify-content: space-between;
+  align-items: center;
+
+  &-txt {
+    font-size: 34px;
+    color: #333;
+  }
+  &-icon {
+  }
+}

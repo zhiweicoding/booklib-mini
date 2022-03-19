@@ -1,0 +1,420 @@
+/**index.wxss**/
+@import "@styles/color.scss";
+
+.login-dialog-mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 99998;
+}
+
+.login-dialog {
+  position: fixed;
+  z-index: 99999;
+  top: 30%;
+  left: 20%;
+  display: flex;
+  width: 60%;
+  height: 450px;
+  background: $white;
+  flex-direction: column;
+  border-radius: 15px;
+
+  &-head {
+    height: 100px;
+    font-size: 30px;
+    color: #222;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    padding: 32px 0;
+  }
+
+  &-scroll {
+    height: 220px;
+    padding-left: 8%;
+    padding-right: 8%;
+    width: 84%;
+
+    &-txt {
+      line-height: 45px;
+      font-size: 26px;
+      color: $text-color;
+    }
+
+    &-na {
+      line-height: 45px;
+      font-size: 26px;
+      color: $text-color-nav;
+    }
+  }
+
+  &-footer {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    flex-direction: column;
+
+    &-agree {
+      width: 100%;
+      height: 100px;
+      text-align: center;
+      font-size: 28px;
+      line-height: 80px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      border: 0px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      color: #ffffff;
+      background: #e02125;
+    }
+
+    &-no {
+      width: 100%;
+      height: 20px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      font-size: 22px;
+      text-align: center;
+      background-color: #ffffff;
+      color: $text-color-lighter;
+    }
+  }
+}
+
+.banner {
+  width: 750px;
+  height: 225px;
+  margin-top: 60px;
+}
+
+.banner image {
+  width: 100%;
+  height: 225px;
+  border-radius: 10px;
+}
+
+.buyPeopleItem {
+  display: inline-block;
+  height: 215px;
+  width: 262px;
+  margin-top: 3px;
+  margin-left: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px #fff solid;
+  padding: 4px 2px 2px 4px;
+  box-shadow: 1px 2px 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.buyPeopleItemOther {
+  display: inline-block;
+  height: 215px;
+  width: 162px;
+  margin-left: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px #fff solid;
+  padding: 4px 2px 2px 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+}
+
+.buyPeopleItemOther:before,
+.buyPeopleItemOther:after {
+  position: absolute;
+  content: "";
+  top: 200px;
+  bottom: 10px;
+  left: 60px;
+  right: 60px;
+  z-index: -1;
+  /* box-shadow: 0 0 40px 13px #486685; */
+  border-radius: 200px/40px;
+}
+
+.buyPeopleItem:last-child {
+  margin-right: 30px;
+}
+
+.buyPeopleItem:before,
+.buyPeopleItem:after {
+  position: absolute;
+  content: "";
+  top: 200px;
+  bottom: 10px;
+  left: 60px;
+  right: 60px;
+  z-index: -1;
+  /* box-shadow: 0 0 40px 13px hsl(210, 30%, 40%); */
+  border-radius: 200px/40px;
+}
+
+.search {
+  height: auto;
+  width: 100%;
+  padding: 0 30px 15px 30px;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.search .input {
+  width: 690px;
+  height: 64px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 2px #8a4b3f solid;
+  justify-content: space-between;
+}
+
+.search .icon {
+  background: url(https://lg-qrm18qcm-1255940368.cos.ap-shanghai.myqcloud.com/weappfind/searchIcon.png) center no-repeat;
+  background-size: 100%;
+  width: 36px;
+  height: 36px;
+}
+
+.search .txt {
+  height: 54px;
+  line-height: 54px;
+  color: #727176;
+  padding-left: 10px;
+  font-size: 28px;
+  margin-left: 10px;
+}
+
+.search .searchBefore {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.search .searchAfter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.search .searchImg {
+  background: url(https://lg-qrm18qcm-1255940368.cos.ap-shanghai.myqcloud.com/weappfind/searchImgHelp.png) center
+    no-repeat;
+  background-size: 80%;
+  width: 54px;
+  height: 54px;
+  margin-right: 24px;
+}
+
+.search .searchName {
+  width: 160px;
+  height: 64px;
+  line-height: 64px;
+  color: #ffffff;
+  font-size: 30px;
+  border-radius: 50px;
+  text-align: center;
+  background-image: linear-gradient(135deg, #c7968c 10%, #8a4b3f 100%);
+}
+
+.buyShowMoreBody {
+  position: absolute;
+  top: 30%;
+  left: 18%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+}
+
+.partCommon {
+  height: 174px;
+  flex: 1;
+  vertical-align: middle;
+  border-radius: 8px;
+}
+
+.partimg {
+  width: 100px;
+  height: 100px;
+  margin: 10px 17px 0 17px;
+  border-radius: 5px;
+}
+
+.parttxt {
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.backline3 {
+  width: 100%;
+  height: 12px;
+  background: #f6f6f6;
+  margin-top: 50px;
+}
+
+.backline4 {
+  width: 100%;
+  height: 12px;
+  background: #f6f6f6;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.dialog {
+  position: relative;
+}
+
+.dialog_container {
+  position: fixed;
+  top: 9%;
+  left: 12.5%;
+  width: 80%;
+  height: 85%;
+  z-index: 9999;
+  text-align: center;
+}
+
+.dialog_container_window {
+  width: 100%;
+  height: 100%;
+}
+
+.dialog_close_button {
+  width: 60px;
+  height: 60px;
+  margin: 26px;
+}
+
+.formButton {
+  z-index: 10;
+  background: transparent;
+  width: 1px;
+  height: 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.dialog_mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.close-button {
+  width: 42px;
+  height: 42px;
+  text-align: right;
+}
+
+.title-coupon {
+  display: flex;
+}
+
+.protect-line {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.protect-item {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.index-duigou-img {
+  width: 30px;
+  height: 30px;
+}
+
+.index-duigou-text {
+  font-size: 23px;
+  margin-left: 10px;
+}
+
+.buyPartHead {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.buyPartName {
+  color: #444;
+  font-size: 22px;
+  flex: 2;
+}
+
+.buyPartTime {
+  color: #444;
+  font-size: 22px;
+  margin-right: 3px;
+}
+
+.buyPartDetail {
+  color: #999;
+  font-size: 20px;
+  white-space: pre-line;
+  margin-bottom: 3px;
+}
+
+.circle-float {
+  position: fixed;
+  z-index: 800;
+  left: 87%;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  font-size: 28px;
+  background: #fff;
+  padding: 8px;
+  border: 1px solid #df4747;
+}
+
+.scrollViewCss {
+  height: 1700px;
+}
+
+.showImgUrl {
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 15px;
+}
+
+.showImg {
+  width: 100%;
+}

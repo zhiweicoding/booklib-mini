@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "pic": "../../component/pic/pic",
+    "load-more": "../../component/loadMore/loadMore"
+  },
+  "navigationBarTitleText": "彩页",
+  "enablePullDownRefresh": false
+}

@@ -1,0 +1,8 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="mu " bindtap="openUrl" data-e-tap-so="this">
+        <view class="mu-txt">2019数字天津</view>
+        <block wx:if="{{hasNext}}">
+            <view class="mu-icon icon icon-right" style="font-size:18px;color:#461c14;"></view>
+        </block>
+    </view>
+</block>

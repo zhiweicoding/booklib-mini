@@ -1,0 +1,373 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 200rpx 0; */
+  box-sizing: border-box;
+  font-family: PingFangSC-Light, helvetica, 'Heiti SC';
+  background-color: #fff;
+}
+
+view, image, text, navigator {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+view, text {
+  font-family: PingFangSC-Light, helvetica, 'Heiti SC';
+  font-size: 29px;
+  // color: #333;
+}
+
+.grey {
+  color: #888;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt15 {
+  margin-top: 15px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.mr5 {
+  margin-right: 5px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mr15 {
+  margin-right: 15px;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+.mr30 {
+  margin-right: 30px;
+}
+
+.mr35 {
+  margin-right: 35px;
+}
+
+.mr40 {
+  margin-right: 40px;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb15 {
+  margin-bottom: 15px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.mb50 {
+  margin-bottom: 50px;
+}
+
+.mb120 {
+  margin-bottom: 120px;
+}
+
+.ft22 {
+  font-size: 22px;
+}
+
+.ft24 {
+  font-size: 24px;
+}
+
+.ft26 {
+  font-size: 26px;
+}
+
+.ft28 {
+  font-size: 28px;
+}
+
+.ft30 {
+  font-size: 30px;
+}
+
+.pd5 {
+  padding-bottom: 5px;
+}
+
+.pd10 {
+  padding-bottom: 10px;
+}
+
+.pd15 {
+  padding-bottom: 15px;
+}
+
+.pd20 {
+  padding-bottom: 20px;
+}
+
+.pd25 {
+  padding-bottom: 25px;
+}
+
+.pd30 {
+  padding-bottom: 30px;
+}
+
+.pd35 {
+  padding-bottom: 35px;
+}
+
+.pd40 {
+  padding-bottom: 40px;
+}
+
+.pt5 {
+  padding-top: 5px;
+}
+
+.pt10 {
+  padding-top: 10px;
+}
+
+.pt15 {
+  padding-top: 15px;
+}
+
+.pt20 {
+  padding-top: 20px;
+}
+
+.pt25 {
+  padding-top: 25px;
+}
+
+.pt30 {
+  padding-top: 30px;
+}
+
+.pt35 {
+  padding-top: 35px;
+}
+
+.pt40 {
+  padding-top: 40px;
+}
+
+.pl5 {
+  padding-left: 5px;
+}
+
+.pl10 {
+  padding-left: 10px;
+}
+
+.pl15 {
+  padding-left: 15px;
+}
+
+.pl20 {
+  padding-left: 20px;
+}
+
+.pl25 {
+  padding-left: 25px;
+}
+
+.pl30 {
+  padding-left: 30px;
+}
+
+.pl35 {
+  padding-left: 35px;
+}
+
+.pl40 {
+  padding-left: 40px;
+}
+
+.pr5 {
+  padding-right: 5px;
+}
+
+.pr10 {
+  padding-right: 10px;
+}
+
+.pr15 {
+  padding-right: 15px;
+}
+
+.pr20 {
+  padding-right: 20px;
+}
+
+.pr25 {
+  padding-right: 25px;
+}
+
+.pr30 {
+  padding-right: 30px;
+}
+
+.pr35 {
+  padding-right: 35px;
+}
+
+.pr40 {
+  padding-right: 40px;
+}
+
+.cBlack {
+  color: #868686;
+}
+
+.cRed {
+  color: #b44647;
+}
+
+.cGold {
+  color: #b4a078;
+}
+
+.cWhite {
+  color: #fff;
+}
+
+.bcRed {
+  background-color: #b44647;
+}
+
+.bcGold {
+  background-color: #b4a078;
+}
+
+.oneLine {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.twoLine {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.widthFull {
+  width: 100%;
+}
+
+.lineDel {
+  text-decoration: line-through;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.formButton {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  position: fixed;
+  top: 0;
+  transform: none;
+}
+
+.formButton:after {
+  border: none;
+}
+
+.realClass {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.activityIndexImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(https://lg-qrm18qcm-1255940368.cos.ap-shanghai.myqcloud.com/blankback-201801.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+}
+
+.activityButton {
+  position: absolute;
+  top: 88%;
+  left: 32%;
+  width: 280px;
+  height: 100px;
+}
+
+.activitySoundButton {
+  position: absolute;
+  top: 2%;
+  left: 88%;
+  width: 64px;
+  height: 64px;
+}
+
+.actText {
+  width: 100%;
+  margin-top: 40px;
+  padding: 50px 120px;
+  height: 300px;
+}
+
+.actBody {
+  margin-top: 60px;
+}
+
+.itemText {
+  width: 100%;
+  padding: 20px 0px;
+  height: 170px;
+}

@@ -1,0 +1,487 @@
+
+@charset "UTF-8";
+/**index.wxss**/
+/**
+ * 对于部分不兼容的样式，可以通过 mixins 统一处理
+ */
+/**
+ * // NOTE Taro 编译成 RN 时对 border 的处理有问题
+ * RN 不支持针对某一边设置 style，即 border-bottom-style 会报错
+ * 那么 border-bottom: 1px 就需要写成如下形式：
+ * border: 0 style color; border-bottom-width: 1px;
+ */
+/**
+ * 对于不能打包到 RN 的样式，可以用 mixins 引入，相对美观一些
+ */
+/**
+ * // TODO 1px 的线在各端上实现方式不同，统一出来后续再兼容，目前注意两点：
+ * 1. Taro 中大写的 PX 不会被编译成 rpx/em，但 RN 还未兼容该写法
+ * 2. H5 中 1px(转成 rem 后实际小于 0.5px) + border-radius 会导致 border 不显示
+ */
+/**
+ * NOTE RN 无法通过 text-overflow 实现省略号，这些代码不能打包到 RN 中
+ */
+/**
+ * NOTE 实现多行文本省略，RN 用 Text 标签的 numberOfLines，H5/小程序用 -webkit-line-clamp
+ */
+.login-dialog-mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 99998; }
+
+.login-dialog {
+  position: fixed;
+  z-index: 99999;
+  top: 30%;
+  left: 20%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  height: 450rpx;
+  background: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 15rpx; }
+  .login-dialog-head {
+    height: 100rpx;
+    font-size: 30rpx;
+    color: #222;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    line-height: 30rpx;
+    padding: 32rpx 0; }
+  .login-dialog-scroll {
+    height: 220rpx;
+    padding-left: 8%;
+    padding-right: 8%;
+    width: 84%; }
+    .login-dialog-scroll-txt {
+      line-height: 45rpx;
+      font-size: 26rpx;
+      color: #333333; }
+    .login-dialog-scroll-na {
+      line-height: 45rpx;
+      font-size: 26rpx;
+      color: #7a8195; }
+  .login-dialog-footer {
+    width: 100%;
+    height: 140rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom-left-radius: 15rpx;
+    border-bottom-right-radius: 15rpx;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .login-dialog-footer-agree {
+      width: 100%;
+      height: 100rpx;
+      text-align: center;
+      font-size: 28rpx;
+      line-height: 80rpx;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      border: 0;
+      border-bottom-left-radius: 15rpx;
+      border-bottom-right-radius: 15rpx;
+      color: #ffffff;
+      background: #e02125; }
+    .login-dialog-footer-no {
+      width: 100%;
+      height: 20rpx;
+      margin-top: 10rpx;
+      margin-bottom: 30rpx;
+      font-size: 22rpx;
+      text-align: center;
+      background-color: #ffffff;
+      color: #999999; }
+
+.banner {
+  width: 750rpx;
+  height: 225rpx;
+  margin-top: 60rpx; }
+
+.banner image {
+  width: 100%;
+  height: 225rpx;
+  border-radius: 10rpx; }
+
+.buyPeopleItem {
+  display: inline-block;
+  height: 215rpx;
+  width: 262rpx;
+  margin-top: 3rpx;
+  margin-left: 20rpx;
+  overflow: hidden;
+  border-radius: 5rpx;
+  border: 1rpx #fff solid;
+  padding: 4rpx 2rpx 2rpx 4rpx;
+  -webkit-box-shadow: 1rpx 2rpx 4rpx 5rpx rgba(0, 0, 0, 0.1);
+          box-shadow: 1rpx 2rpx 4rpx 5rpx rgba(0, 0, 0, 0.1); }
+
+.buyPeopleItemOther {
+  display: inline-block;
+  height: 215rpx;
+  width: 162rpx;
+  margin-left: 20rpx;
+  overflow: hidden;
+  border-radius: 5rpx;
+  border: 1rpx #fff solid;
+  padding: 4rpx 2rpx 2rpx 4rpx;
+  -webkit-box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.2);
+  margin-right: 20rpx; }
+
+.buyPeopleItemOther:before,
+.buyPeopleItemOther:after {
+  position: absolute;
+  content: "";
+  top: 200rpx;
+  bottom: 10rpx;
+  left: 60rpx;
+  right: 60rpx;
+  z-index: -1;
+  /* box-shadow: 0 0 40px 13px #486685; */
+  border-radius: 200rpx/40rpx; }
+
+.buyPeopleItem:last-child {
+  margin-right: 30rpx; }
+
+.buyPeopleItem:before,
+.buyPeopleItem:after {
+  position: absolute;
+  content: "";
+  top: 200rpx;
+  bottom: 10rpx;
+  left: 60rpx;
+  right: 60rpx;
+  z-index: -1;
+  /* box-shadow: 0 0 40px 13px hsl(210, 30%, 40%); */
+  border-radius: 200rpx/40rpx; }
+
+.search {
+  height: auto;
+  width: 100%;
+  padding: 0 30rpx 15rpx 30rpx;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1002;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
+
+.search .input {
+  width: 690rpx;
+  height: 64rpx;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50rpx;
+  border: 2rpx #8a4b3f solid;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.search .icon {
+  background: url(https://lg-qrm18qcm-1255940368.cos.ap-shanghai.myqcloud.com/weappfind/searchIcon.png) center no-repeat;
+  background-size: 100%;
+  width: 36rpx;
+  height: 36rpx; }
+
+.search .txt {
+  height: 54rpx;
+  line-height: 54rpx;
+  color: #727176;
+  padding-left: 10rpx;
+  font-size: 28rpx;
+  margin-left: 10rpx; }
+
+.search .searchBefore {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 20rpx; }
+
+.search .searchAfter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.search .searchImg {
+  background: url(https://lg-qrm18qcm-1255940368.cos.ap-shanghai.myqcloud.com/weappfind/searchImgHelp.png) center no-repeat;
+  background-size: 80%;
+  width: 54rpx;
+  height: 54rpx;
+  margin-right: 24rpx; }
+
+.search .searchName {
+  width: 160rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  color: #ffffff;
+  font-size: 30rpx;
+  border-radius: 50rpx;
+  text-align: center;
+  background-image: -webkit-linear-gradient(315deg, #c7968c 10%, #8a4b3f 100%);
+  background-image: -o-linear-gradient(315deg, #c7968c 10%, #8a4b3f 100%);
+  background-image: linear-gradient(135deg, #c7968c 10%, #8a4b3f 100%); }
+
+.buyShowMoreBody {
+  position: absolute;
+  top: 30%;
+  left: 18%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.partCommon {
+  height: 174rpx;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  vertical-align: middle;
+  border-radius: 8rpx; }
+
+.partimg {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx 17rpx 0 17rpx;
+  border-radius: 5rpx; }
+
+.parttxt {
+  width: 100%;
+  text-align: center;
+  font-size: 25rpx;
+  font-weight: 500; }
+
+.backline3 {
+  width: 100%;
+  height: 12rpx;
+  background: #f6f6f6;
+  margin-top: 50rpx; }
+
+.backline4 {
+  width: 100%;
+  height: 12rpx;
+  background: #f6f6f6;
+  margin-top: 0;
+  margin-bottom: 10rpx; }
+
+.dialog {
+  position: relative; }
+
+.dialog_container {
+  position: fixed;
+  top: 9%;
+  left: 12.5%;
+  width: 80%;
+  height: 85%;
+  z-index: 9999;
+  text-align: center; }
+
+.dialog_container_window {
+  width: 100%;
+  height: 100%; }
+
+.dialog_close_button {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 26rpx; }
+
+.formButton {
+  z-index: 10;
+  background: transparent;
+  width: 1rpx;
+  height: 1rpx;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+.dialog_mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.3); }
+
+.show {
+  display: block; }
+
+.hidden {
+  display: none; }
+
+.close-button {
+  width: 42rpx;
+  height: 42rpx;
+  text-align: right; }
+
+.title-coupon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.protect-line {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx; }
+
+.protect-item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.index-duigou-img {
+  width: 30rpx;
+  height: 30rpx; }
+
+.index-duigou-text {
+  font-size: 23rpx;
+  margin-left: 10rpx; }
+
+.buyPartHead {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5rpx; }
+
+.buyPartName {
+  color: #444;
+  font-size: 22rpx;
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+      -ms-flex: 2;
+          flex: 2; }
+
+.buyPartTime {
+  color: #444;
+  font-size: 22rpx;
+  margin-right: 3rpx; }
+
+.buyPartDetail {
+  color: #999;
+  font-size: 20rpx;
+  white-space: pre-line;
+  margin-bottom: 3rpx; }
+
+.circle-float {
+  position: fixed;
+  z-index: 800;
+  left: 87%;
+  width: 76rpx;
+  height: 76rpx;
+  border-radius: 50%;
+  font-size: 28rpx;
+  background: #fff;
+  padding: 8rpx;
+  border: 1rpx solid #df4747; }
+
+.scrollViewCss {
+  height: 1700rpx; }
+
+.showImgUrl {
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 15rpx; }
+
+.showImg {
+  width: 100%; }

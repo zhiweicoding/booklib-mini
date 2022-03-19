@@ -1,0 +1,59 @@
+<block wx:if="{{$taroCompReady}}">
+    <block>
+        <view class="container">
+            <view class="info">
+                <image class="info-avatar" mode="widthFix" src="{{userInfo.avatarUrl}}"></image><text class="info-name"> {{userInfo.nickName}}  </text>
+            </view>
+            <view class="divHeight"></view>
+            <view class="config">
+                <view class="config-title">
+                    <view class="config-title-left">设置中心</view>
+                    <view class="config-title-right">
+                        <view class="config-title-right-desc"></view>
+                    </view>
+                </view>
+                <view class="config-body">
+                    <view class="config-body-item">
+                        <view class="config-body-item-txt">阅读字体大小</view>
+                        <at-input-number compid="{{$compid__1}}"></at-input-number>
+                    </view>
+                    <view class="config-body-itemTitle">阅读背景颜色</view>
+                    <view class="config-body-itemSpecial">
+                        <view class="config-body-itemSpecial-white"></view>
+                        <view class="config-body-itemSpecial-green"></view>
+                        <view class="config-body-itemSpecial-zong"></view>
+                    </view>
+                </view>
+            </view>
+            <view class="divHeight"></view>
+            <view class="account">
+                <view class="account-title">
+                    <view class="account-title-left">个人中心</view>
+                    <view class="account-title-right">
+                        <view class="account-title-right-desc"></view>
+                    </view>
+                </view>
+                <view class="account-body">
+                    <navigator class="account-body-item" url="/pages/mine/like/like">
+                        <view class="account-body-item-icon icon icon-mark"></view>
+                        <view class="account-body-item-txt">我的收藏</view>
+                        <view class="account-body-item-span">12</view>
+                    </navigator>
+                    <navigator class="account-body-item" url="/pages/mine/feedback/feedback">
+                        <view class="account-body-item-icon icon icon-mark"></view>
+                        <view class="account-body-item-txt">意见反馈</view>
+                        <view class="account-body-item-white">0</view>
+                    </navigator>
+                    <view class="account-body-item">
+                        <view class="account-body-item-icon icon icon-message" style="color:white;"></view>
+                        <view class="account-body-item-txt" style="color:white;">我待评价</view>
+                    </view>
+                    <view class="account-body-item">
+                        <view class="account-body-item-icon icon icon-message" style="color:white;"></view>
+                        <view class="account-body-item-txt" style="color:white;">我待评价</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</block>
